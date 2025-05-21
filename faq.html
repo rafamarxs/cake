@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes - Guia do Bolo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-item.active .faq-toggle i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-rose-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-rose-600 flex items-center">
+                <i class="fas fa-birthday-cake mr-2"></i> Guia do Bolo
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-rose-600 transition">Voltar para o Guia</a>                
+            </div>
+            <button class="md:hidden text-rose-600" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="index.html" class="block py-2 hover:text-rose-600 transition">Voltar para o Guia</a>
+            <a href="canais.html" class="block py-2 hover:text-rose-600 transition">Canais do YouTube</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-r from-rose-100 to-amber-100">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                Perguntas Frequentes
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Tire todas suas dúvidas sobre como abrir sua loja de bolos com apenas R$15 mil
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <!-- Search Box -->
+            <div class="max-w-2xl mx-auto mb-12 relative">
+                <input type="text" placeholder="Buscar perguntas..." class="w-full px-6 py-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent shadow-sm">
+                <button class="absolute right-3 top-3 bg-rose-600 text-white p-2 rounded-full hover:bg-rose-700 transition">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <!-- FAQ Categories -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="category-btn bg-rose-600 text-white px-4 py-2 rounded-full" data-category="all">
+                    Todas
+                </button>
+                <button class="category-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full" data-category="investimento">
+                    Investimento
+                </button>
+                <button class="category-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full" data-category="legalizacao">
+                    Legalização
+                </button>
+                <button class="category-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full" data-category="producao">
+                    Produção
+                </button>
+                <button class="category-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full" data-category="vendas">
+                    Vendas
+                </button>
+            </div>
+            
+            <!-- FAQ List -->
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-md cursor-pointer" data-category="investimento">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-800">Quanto preciso investir para começar?</h3>
+                        <div class="faq-toggle text-rose-600">
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer mt-4">
+                        <p class="text-gray-600">
+                            Com nosso método, você pode começar uma loja de bolos completa com apenas R$15 mil. Esse valor inclui:
+                        </p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                            <li>Equipamentos básicos (forno, batedeira, formas)</li>
+                            <li>Matéria-prima para os primeiros meses</li>
+                            <li>Material de divulgação</li>
+                            <li>Taxas de legalização</li>
+                            <li>Decoração básica do espaço</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-md cursor-pointer" data-category="legalizacao">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-800">Quais documentos preciso para legalizar meu negócio?</h3>
+                        <div class="faq-toggle text-rose-600">
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer mt-4">
+                        <p class="text-gray-600">
+                            Os principais documentos necessários são:
+                        </p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                            <li>Registro na prefeitura (alvará de funcionamento)</li>
+                            <li>Registro na vigilância sanitária</li>
+                            <li>CNPJ (como MEI - Microempreendedor Individual)</li>
+                            <li>Registro no Sindicato de Panificação</li>
+                            <li>Contrato de locação ou comprovante de endereço</li>
+                        </ul>
+                        <p class="mt-3 text-gray-600">
+                            No nosso guia completo, explicamos passo a passo como obter cada um desses documentos.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-md cursor-pointer" data-category="producao">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-800">Preciso ter experiência em confeitaria para começar?</h3>
+                        <div class="faq-toggle text-rose-600">
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer mt-4">
+                        <p class="text-gray-600">
+                            Não é necessário ter experiência profissional, mas é importante que você:
+                        </p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                            <li>Goste de cozinhar e tenha afinidade com a cozinha</li>
+                            <li>Esteja disposto a aprender técnicas básicas</li>
+                            <li>Tenha paciência para praticar antes de vender</li>
+                        </ul>
+                        <p class="mt-3 text-gray-600">
+                            No guia, incluímos uma lista dos canais do YouTube mais didáticos para aprender do zero, além de receitas testadas e aprovadas para iniciantes.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-md cursor-pointer" data-category="vendas">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-800">Como conseguir meus primeiros clientes?</h3>
+                        <div class="faq-toggle text-rose-600">
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer mt-4">
+                        <p class="text-gray-600">
+                            Existem várias estratégias eficazes para conquistar seus primeiros clientes:
+                        </p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                            <li><strong>Divulgação em redes sociais:</strong> Instagram e Facebook são ótimos para mostrar seus produtos</li>
+                            <li><strong>Amostras grátis:</strong> Ofereça pequenas porções para amigos e familiares avaliarem</li>
+                            <li><strong>Parcerias:</strong> Cafés e mercearias podem vender seus bolos em consignação</li>
+                            <li><strong>Feiras locais:</strong> Participe de feirinhas gastronômicas para divulgar seu trabalho</li>
+                            <li><strong>Promoções:</strong> Descontos para os primeiros pedidos ajudam a criar clientela</li>
+                        </ul>
+                        <p class="mt-3 text-gray-600">
+                            No guia completo, ensinamos estratégias detalhadas de marketing digital e local para alavancar suas vendas.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-md cursor-pointer" data-category="investimento">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-800">Quanto posso lucrar com uma loja de bolos?</h3>
+                        <div class="faq-toggle text-rose-600">
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer mt-4">
+                        <p class="text-gray-600">
+                            A margem de lucro na confeitaria pode variar entre 40% a 60%, dependendo do tipo de produto e da escala de produção. Veja alguns exemplos:
+                        </p>
+                        <div class="mt-3 overflow-x-auto">
+                            <table class="min-w-full bg-white rounded-lg overflow-hidden">
+                                <thead class="bg-gray-100">
+                                    <tr>
+                                        <th class="py-2 px-4 text-left">Produto</th>
+                                        <th class="py-2 px-4 text-left">Custo</th>
+                                        <th class="py-2 px-4 text-left">Preço de Venda</th>
+                                        <th class="py-2 px-4 text-left">Lucro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="py-2 px-4">Bolo simples (kg)</td>
+                                        <td class="py-2 px-4">R$ 12-15</td>
+                                        <td class="py-2 px-4">R$ 25-35</td>
+                                        <td class="py-2 px-4">R$ 13-20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4">Bolo decorado (kg)</td>
+                                        <td class="py-2 px-4">R$ 20-30</td>
+                                        <td class="py-2 px-4">R$ 50-80</td>
+                                        <td class="py-2 px-4">R$ 30-50</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4">Cupcake (un)</td>
+                                        <td class="py-2 px-4">R$ 1,50-2,50</td>
+                                        <td class="py-2 px-4">R$ 5-8</td>
+                                        <td class="py-2 px-4">R$ 3,50-5,50</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="mt-3 text-gray-600">
+                            Com uma produção média de 20 bolos por semana, é possível ter um lucro líquido mensal entre R$3.000 e R$6.000.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-md cursor-pointer" data-category="producao">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-800">Quais equipamentos são essenciais para começar?</h3>
+                        <div class="faq-toggle text-rose-600">
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer mt-4">
+                        <p class="text-gray-600">
+                            Você pode começar com equipamentos básicos e ir expandindo conforme o negócio cresce:
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                            <div class="bg-rose-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-rose-700 mb-2">Equipamentos Essenciais</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Forno elétrico ou a gás</li>
+                                    <li>Batedeira planetária</li>
+                                    <li>Conjunto de formas básicas</li>
+                                    <li>Balcão refrigerado</li>
+                                    <li>Utensílios básicos (espátulas, rolos, etc.)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-amber-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-amber-700 mb-2">Para Expansão</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Máquina de bolo no pote</li>
+                                    <li>Máquina de cupcake</li>
+                                    <li>Conjunto profissional de decoração</li>
+                                    <li>Freezer vertical</li>
+                                    <li>Mesa de trabalho em aço inox</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">
+                            No guia completo, incluímos uma lista detalhada com marcas recomendadas e onde comprar com melhor custo-benefício.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 7 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-md cursor-pointer" data-category="vendas">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-800">Como definir os preços dos meus bolos?</h3>
+                        <div class="faq-toggle text-rose-600">
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer mt-4">
+                        <p class="text-gray-600">
+                            O preço deve cobrir todos os seus custos e ainda gerar lucro. Siga esta fórmula simples:
+                        </p>
+                        <div class="bg-gray-100 p-4 rounded-lg mt-3">
+                            <p class="font-bold text-center">
+                                Preço de Venda = (Custo dos Ingredientes + Mão de Obra + Custos Fixos) + Margem de Lucro
+                            </p>
+                        </div>
+                        <p class="mt-3 text-gray-600">
+                            Passo a passo para calcular:
+                        </p>
+                        <ol class="list-decimal pl-5 mt-2 space-y-1 text-gray-600">
+                            <li>Calcule o custo total dos ingredientes por receita</li>
+                            <li>Estime o tempo gasto e atribua um valor por hora (R$15-30/h para iniciantes)</li>
+                            <li>Some uma porcentagem dos custos fixos (aluguel, energia, etc.)</li>
+                            <li>Adicione sua margem de lucro desejada (40-60%)</li>
+                        </ol>
+                        <p class="mt-3 text-gray-600">
+                            No guia, incluímos uma planilha pronta para cálculo automático de preços.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Still Have Questions -->
+<div class="mt-16 bg-white rounded-xl shadow-lg p-8 text-center">
+    <h3 class="text-2xl font-bold text-gray-800 mb-4">Ainda tem dúvidas?</h3>
+    <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+        Entre em contato conosco pelo formulário abaixo ou através das nossas redes sociais. Nossa equipe está pronta para te ajudar!
+    </p>
+    <form action="https://formsubmit.co/rafael@mmarques.net" method="POST" class="max-w-lg mx-auto">
+        <!-- Campos ocultos para personalização -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Novo contato do site de Casa de Bolos">
+        <input type="hidden" name="_next" value="https://formsubmit.co/el/yicisa">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <input type="text" name="name" placeholder="Seu nome" required 
+                   class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent">
+            <input type="email" name="email" placeholder="Seu e-mail" required 
+                   class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent">
+        </div>
+        <textarea name="message" placeholder="Sua mensagem" required 
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent h-32 mb-4"></textarea>
+        <button type="submit" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded-lg transition">
+            Enviar Mensagem
+        </button>
+    </form>
+</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-2xl font-bold text-rose-400 mb-4 flex items-center">
+                        <i class="fas fa-birthday-cake mr-2"></i> Guia do Bolo
+                    </h3>
+                    <p class="text-gray-300">
+                        O guia completo para você abrir sua loja de bolos com apenas R$15 mil, mesmo começando do zero.
+                    </p>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#sobre" class="text-gray-300 hover:text-rose-400 transition">Sobre o Projeto</a></li>
+                        <li><a href="#passo-a-passo" class="text-gray-300 hover:text-rose-400 transition">Passo a Passo</a></li>
+                        <li><a href="#planejamento" class="text-gray-300 hover:text-rose-400 transition">Planejamento de 90 Dias</a></li>
+                        <li><a href="#downloads" class="text-gray-300 hover:text-rose-400 transition">Materiais Gratuitos</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-rose-400"></i> rafael@mmarques.net
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-rose-400"></i> (11) 95837-2200
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-rose-400"></i> São Paulo - SP
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/rafamarxs/" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rafamarxs/" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@rafamarxs" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://wa.me/5511958372200" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h5 class="font-bold mb-2">Assine nossa newsletter</h5>
+                        <div class="flex">
+                            <input type="email" placeholder="Seu email" class="px-3 py-2 text-gray-800 rounded-l focus:outline-none w-full">
+                            <button class="bg-rose-600 hover:bg-rose-700 px-4 rounded-r transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300">© 2025 Guia do Bolo. Todos os direitos reservados.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-300 hover:text-rose-400 transition">Política de Privacidade</a>
+                    <a href="#" class="text-gray-300 hover:text-rose-400 transition">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('h3');
+            const toggle = item.querySelector('.faq-toggle');
+            
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+            
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Filter FAQ by category
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                categoryButtons.forEach(btn => {
+                    btn.classList.remove('bg-rose-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'hover:bg-gray-300');
+                });
+                
+                button.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+                button.classList.add('bg-rose-600', 'text-white');
+                
+                // Filter FAQ items
+                const category = button.dataset.category;
+                
+                faqItems.forEach(item => {
+                    if (category === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        if (item.dataset.category === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

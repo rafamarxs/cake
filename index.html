@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia do Bolo: Como Abrir Sua Loja com R$15 mil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5e8df 0%, #f2d9d9 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .sticky-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 34px;
+            height: calc(100% - 34px);
+            width: 2px;
+            background-color: #e9a3a3;
+        }
+        
+        .download-card:hover .download-icon {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-rose-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-rose-600 flex items-center">
+                <i class="fas fa-birthday-cake mr-2"></i> Guia do Bolo
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#sobre" class="hover:text-rose-600 transition">Sobre</a>
+                <a href="#passo-a-passo" class="hover:text-rose-600 transition">Passo a Passo</a>
+                <a href="#planejamento" class="hover:text-rose-600 transition">90 Dias</a>
+                <a href="#downloads" class="hover:text-rose-600 transition">Materiais</a>
+                <a href="#faq" class="hover:text-rose-600 transition">Dúvidas</a>
+            </div>
+            <button class="md:hidden text-rose-600" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white py-2 px-4 shadow-lg" id="mobile-menu">
+            <a href="#sobre" class="block py-2 hover:text-rose-600 transition">Sobre</a>
+            <a href="#passo-a-passo" class="block py-2 hover:text-rose-600 transition">Passo a Passo</a>
+            <a href="#planejamento" class="block py-2 hover:text-rose-600 transition">90 Dias</a>
+            <a href="#downloads" class="block py-2 hover:text-rose-600 transition">Materiais</a>
+            <a href="#faq" class="block py-2 hover:text-rose-600 transition">Dúvidas</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Monte sua loja de bolos com apenas <span class="text-rose-600">R$15 mil</span> – mesmo começando do zero!
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Um guia completo e gratuito para você sair da ideia e partir para a prática.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#passo-a-passo" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded-full text-center transition shadow-lg">
+                        Comece Agora
+                    </a>
+                    <a href="#planejamento" class="bg-white hover:bg-gray-100 text-rose-600 font-bold py-3 px-6 rounded-full text-center transition shadow-lg">
+                        Planejamento de 90 Dias
+                    </a>
+                    <a href="#downloads" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-full text-center transition shadow-lg">
+                        Baixar Check-list
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                     alt="Bolo decorado" 
+                     class="rounded-xl shadow-2xl max-w-full h-auto max-h-96 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Sobre o Guia do Bolo</h2>
+                <div class="w-24 h-1 bg-rose-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://assets.unileversolutions.com/recipes-v2/103854.jpg" 
+                         alt="Pessoa decorando bolo" 
+                         class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-600 mb-6">
+                        O Guia do Bolo foi criado para ajudar pessoas comuns a transformarem sua paixão por confeitaria em um negócio real, mesmo sem experiência prévia e com um investimento acessível.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Nosso objetivo é fornecer todas as informações necessárias para você abrir sua loja de bolos com apenas R$15 mil, cobrindo desde a parte burocrática até estratégias de marketing e crescimento.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        <span class="font-bold text-rose-600">Importante:</span> Você pode começar pequeno e crescer com o tempo. O segredo está em começar!
+                    </p>
+                    <div class="bg-rose-50 border-l-4 border-rose-500 p-4">
+                        <p class="text-xl font-bold text-gray-800 italic">
+                            "Transforme sua paixão por bolos em um negócio de verdade!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step by Step Section -->
+    <section id="passo-a-passo" class="py-16 bg-rose-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Passo a Passo para Abrir sua Loja</h2>
+                <p class="text-xl text-gray-600 mb-4">Tudo que você precisa saber para começar seu negócio de bolos</p>
+                <div class="w-24 h-1 bg-rose-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-md card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-rose-600 font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Análise de Viabilidade e Local Ideal</h3>
+                    <p class="text-gray-600">
+                        Como avaliar se sua região tem demanda, escolher o melhor local e calcular os custos iniciais.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-md card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-rose-600 font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Equipamentos e Estrutura Física</h3>
+                    <p class="text-gray-600">
+                        Lista completa dos equipamentos essenciais que cabem no orçamento de R$15 mil.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-md card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-rose-600 font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Parte Burocrática</h3>
+                    <p class="text-gray-600">
+                        Guia passo a passo para MEI, licenças e vigilância sanitária de forma simples.
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="bg-white rounded-xl p-6 shadow-md card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-rose-600 font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Matéria-Prima e Fornecedores</h3>
+                    <p class="text-gray-600">
+                        Onde comprar ingredientes com melhor custo-benefício e como negociar com fornecedores.
+                    </p>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="bg-white rounded-xl p-6 shadow-md card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-rose-600 font-bold text-xl">5</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Precificação dos Bolos</h3>
+                    <p class="text-gray-600">
+                        Como calcular o preço de venda corretamente para ter lucro sem afastar clientes.
+                    </p>
+                </div>
+                
+                <!-- Step 6 -->
+                <div class="bg-white rounded-xl p-6 shadow-md card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-rose-600 font-bold text-xl">6</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Estratégias de Divulgação</h3>
+                    <p class="text-gray-600">
+                        Marketing gratuito e de baixo custo para atrair seus primeiros clientes.
+                    </p>
+                </div>
+                
+                <!-- Step 7 -->
+                <div class="bg-white rounded-xl p-6 shadow-md card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-rose-600 font-bold text-xl">7</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Controle Financeiro</h3>
+                    <p class="text-gray-600">
+                        Planilhas simples para controlar fluxo de caixa e acompanhar o crescimento.
+                    </p>
+                </div>
+                
+                <!-- Step 8 -->
+                <div class="bg-white rounded-xl p-6 shadow-md card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-rose-600 font-bold text-xl">8</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Planejamento de Crescimento</h3>
+                    <p class="text-gray-600">
+                        Como expandir seu negócio após os primeiros meses e aumentar seus lucros.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 90 Days Plan Section -->
+    <section id="planejamento" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Planejamento de Abertura em 90 Dias</h2>
+                <p class="text-xl text-gray-600 mb-4">Cronograma detalhado para você abrir sua loja em 3 meses</p>
+                <div class="w-24 h-1 bg-rose-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- Week 1-2 -->
+                <div class="relative timeline-item mb-8">
+                    <div class="flex items-start">
+                        <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fas fa-search text-rose-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Semanas 1–2: Pesquisa e Legalização</h3>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Análise de mercado e concorrência</li>
+                                <li>Definição do público-alvo</li>
+                                <li>Registro como MEI</li>
+                                <li>Orientações da vigilância sanitária</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Week 3-4 -->
+                <div class="relative timeline-item mb-8">
+                    <div class="flex items-start">
+                        <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fas fa-shopping-cart text-rose-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Semanas 3–4: Compra de Equipamentos e Estruturação</h3>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Aquisição de equipamentos essenciais</li>
+                                <li>Organização do espaço de trabalho</li>
+                                <li>Contratação de serviços básicos (água, luz, internet)</li>
+                                <li>Primeiros contatos com fornecedores</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Week 5-6 -->
+                <div class="relative timeline-item mb-8">
+                    <div class="flex items-start">
+                        <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fas fa-utensils text-rose-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Semanas 5–6: Testes de Receita e Marketing Inicial</h3>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Testes e ajustes nas receitas</li>
+                                <li>Padronização dos processos</li>
+                                <li>Criação de redes sociais</li>
+                                <li>Divulgação para amigos e familiares</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Week 7-8 -->
+                <div class="relative timeline-item mb-8">
+                    <div class="flex items-start">
+                        <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fas fa-bullhorn text-rose-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Semanas 7–8: Pré-lançamento e Vendas de Teste</h3>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Ofertas promocionais para primeiros clientes</li>
+                                <li>Coleta de feedbacks</li>
+                                <li>Ajustes finais nos produtos</li>
+                                <li>Divulgação local (panfletos, grupos de bairro)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Week 9-12 -->
+                <div class="relative mb-8">
+                    <div class="flex items-start">
+                        <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fas fa-store text-rose-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Semanas 9–12: Inauguração Oficial e Avaliação</h3>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Evento de inauguração</li>
+                                <li>Campanha de lançamento</li>
+                                <li>Avaliação dos primeiros resultados</li>
+                                <li>Planejamento para os próximos meses</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="https://1drv.ms/w/c/c8d67c0e2ee1abdc/EUs1Z0ec5xdOo-wgMtB3070BYBrIu881Oyeo_GfdoNVz1A?e=3We1nZ" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition shadow-lg">
+                        <i class="fas fa-download mr-2"></i> Baixar Cronograma Completo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="downloads" class="py-16 bg-rose-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Materiais Gratuitos para Download</h2>
+                <p class="text-xl text-gray-600 mb-4">Baixe nossos checklists e modelos prontos para usar</p>
+                <div class="w-24 h-1 bg-rose-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Download 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-md download-card transition duration-300">
+                    <div class="bg-rose-100 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto download-icon transition duration-300">
+                        <i class="fas fa-list-check text-rose-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Checklist de Equipamentos</h3>
+                    <p class="text-gray-600 text-center mb-4">
+                        Lista completa dos equipamentos essenciais com preços médios para montar sua loja com R$15 mil.
+                    </p>
+                    <div class="text-center">
+                        <button onclick="window.open('https://1drv.ms/b/c/c8d67c0e2ee1abdc/EcAkMIbbPrFGthDOhU3Ch9kBXP_LfwLHtK1nV_T19IXzZA?e=dCb0wJ', '_blank')"
+                        class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded-full transition">
+                            Baixar PDF
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Download 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-md download-card transition duration-300">
+                    <div class="bg-rose-100 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto download-icon transition duration-300">
+                        <i class="fas fa-file-alt text-rose-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Documentos Necessários</h3>
+                    <p class="text-gray-600 text-center mb-4">
+                        Relação de todos os documentos e licenças que você precisa para operar legalmente.
+                    </p>
+                    <div class="text-center">
+                        <button onclick="window.open('https://1drv.ms/b/c/c8d67c0e2ee1abdc/EX4XGR5PTFJCip6CUhubswcBmCX6Ac6ftVaK5xbOqMo72w?e=MiouvC', '_blank')"
+                        class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded-full transition">
+                            Baixar PDF
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Download 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-md download-card transition duration-300">
+                    <div class="bg-rose-100 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto download-icon transition duration-300">
+                        <i class="fas fa-calculator text-rose-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Modelo de Precificação</h3>
+                    <p class="text-gray-600 text-center mb-4">
+                        Documento simples para calcular o preço de venda dos seus bolos com margem de lucro.
+                    </p>
+                    <div class="text-center">
+                        <button onclick="window.open('https://1drv.ms/b/c/c8d67c0e2ee1abdc/EUBIG_z95KJDqPxxEpm7bgUBFboNdDl8jiPxVEMXutuCYA?e=5bmC44', '_blank')"
+                        class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded-full transition">
+                            Baixar PDF
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Download 4 -->
+                <div class="bg-white rounded-xl p-6 shadow-md download-card transition duration-300">
+                    <div class="bg-rose-100 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto download-icon transition duration-300">
+                        <i class="fas fa-calendar-alt text-rose-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Cronograma de 90 Dias</h3>
+                    <p class="text-gray-600 text-center mb-4">
+                        Detalhamento completo das tarefas semanais para abrir sua loja em 3 meses.
+                    </p>
+                    <div class="text-center">
+                        <button onclick="window.open('https://1drv.ms/b/c/c8d67c0e2ee1abdc/EWnXvqHcI3dIp0ltTQXCVYUBOiv69rW8m0zIgiNdKZaaew?e=YIUevW', '_blank')"
+                        class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded-full transition">
+                            Baixar PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Email Form -->
+            <div class="max-w-2xl mx-auto mt-16 bg-white rounded-xl shadow-md p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Receba o Guia Completo por Email</h3>
+                <p class="text-gray-600 text-center mb-6">
+                    Envie seu email abaixo para receber todos os materiais em um único PDF e dicas exclusivas por email.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Seu melhor email" class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500">
+                    <button type="submit" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded-lg transition shadow-lg">
+                        Enviar
+                    </button>
+                </form>
+                <p class="text-sm text-gray-500 mt-3 text-center">
+                    Não compartilhamos seus dados. Você pode cancelar a qualquer momento.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Perguntas Frequentes</h2>
+                <p class="text-xl text-gray-600 mb-4">Tire suas principais dúvidas sobre como começar</p>
+                <div class="w-24 h-1 bg-rose-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 hover:text-rose-600 transition">
+                        <span>Preciso ter um ponto comercial para começar?</span>
+                        <i class="fas fa-plus text-rose-600"></i>
+                    </button>
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
+                        Não necessariamente! Muitos confeiteiros começam em casa, seguindo as normas da vigilância sanitária para produção caseira. Você pode começar com vendas online e entregas, e só investir em um ponto comercial quando o volume de vendas justificar.
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 hover:text-rose-600 transition">
+                        <span>E se eu não souber fazer bolo profissionalmente?</span>
+                        <i class="fas fa-plus text-rose-600"></i>
+                    </button>
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
+                        Não se preocupe! Existem muitos cursos gratuitos e acessíveis (inclusive online) que ensinam desde o básico até técnicas profissionais. No Guia do Bolo, recomendamos alguns cursos excelentes e econômicos na seção de Recursos Extras.
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 hover:text-rose-600 transition">
+                        <span>Quanto tempo leva para o negócio dar lucro?</span>
+                        <i class="fas fa-plus text-rose-600"></i>
+                    </button>
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
+                        Isso varia muito conforme sua região, preços e estratégias de marketing. Em média, nossos alunos começam a ter lucro entre 3 a 6 meses, mas já conseguem cobrir os custos fixos a partir do segundo mês quando seguem nosso planejamento de 90 dias.
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 hover:text-rose-600 transition">
+                        <span>Posso começar sozinho ou preciso de funcionários?</span>
+                        <i class="fas fa-plus text-rose-600"></i>
+                    </button>
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
+                        Com R$15 mil, o ideal é começar sozinho ou com ajuda de familiares. Contratar funcionários neste estágio inicial pode comprometer seu orçamento. Nosso guia ensina a organizar a produção para que você consiga atender a demanda inicial sem ajuda externa.
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 hover:text-rose-600 transition">
+                        <span>Quais são os maiores erros que devo evitar?</span>
+                        <i class="fas fa-plus text-rose-600"></i>
+                    </button>
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
+                        Os principais erros são: 1) Não calcular corretamente os custos e precificar errado, 2) Investir em equipamentos desnecessários no início, 3) Não regularizar o negócio com a prefeitura e vigilância sanitária, 4) Não testar as receitas antes de vender, e 5) Não divulgar adequadamente. Nosso guia ajuda a evitar todos esses problemas!
+                    </div>
+                </div>
+
+                <!-- Botão "Ver Mais" -->
+                <div class="mt-12 text-center">
+                    <a href="faq.html" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block transform hover:scale-105">
+                        Ver Todas as Perguntas
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="py-16 bg-rose-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Recursos Extras e Cursos Recomendados</h2>
+                <p class="text-xl text-gray-600 mb-4">Conteúdos gratuitos para você se especializar ainda mais</p>
+                <div class="w-24 h-1 bg-rose-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Resource 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-rose-100 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fas fa-graduation-cap text-rose-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Cursos do SENAC</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Cursos profissionalizantes de confeitaria com preços acessíveis e em diversas cidades do Brasil.
+                    </p>
+                    <a href="https://www.ead.senac.br" target="_blank" class="text-rose-600 font-bold hover:underline inline-flex items-center">
+                        Ver cursos <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Resource 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-rose-100 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fas fa-chalkboard-teacher text-rose-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">SEBRAE</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Cursos gratuitos sobre gestão de pequenos negócios, MEI e planejamento financeiro.
+                    </p>
+                    <a href="https://sebrae.com.br/sites/PortalSebrae" target="_blank" class="text-rose-600 font-bold hover:underline inline-flex items-center">
+                        Acessar <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Resource 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-rose-100 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fab fa-youtube text-rose-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Canais no YouTube</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Lista dos melhores canais gratuitos para aprender técnicas de confeitaria e decoração.
+                    </p>
+                    <a href="youtube.html" class="text-rose-600 font-bold hover:underline inline-flex items-center">
+                        Ver lista <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-2xl font-bold text-rose-400 mb-4 flex items-center">
+                        <i class="fas fa-birthday-cake mr-2"></i> Guia do Bolo
+                    </h3>
+                    <p class="text-gray-300">
+                        O guia completo para você abrir sua loja de bolos com apenas R$15 mil, mesmo começando do zero.
+                    </p>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#sobre" class="text-gray-300 hover:text-rose-400 transition">Sobre o Projeto</a></li>
+                        <li><a href="#passo-a-passo" class="text-gray-300 hover:text-rose-400 transition">Passo a Passo</a></li>
+                        <li><a href="#planejamento" class="text-gray-300 hover:text-rose-400 transition">Planejamento de 90 Dias</a></li>
+                        <li><a href="#downloads" class="text-gray-300 hover:text-rose-400 transition">Materiais Gratuitos</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-rose-400"></i> rafael@mmarques.net
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-rose-400"></i> (11) 95837-2200
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-rose-400"></i> São Paulo - SP
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/rafamarxs/" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rafamarxs/" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@rafamarxs" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://wa.me/5511958372200" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h5 class="font-bold mb-2">Assine nossa newsletter</h5>
+                        <div class="flex">
+                            <input type="email" placeholder="Seu email" class="px-3 py-2 text-gray-800 rounded-l focus:outline-none w-full">
+                            <button class="bg-rose-600 hover:bg-rose-700 px-4 rounded-r transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300">© 2025 Guia do Bolo. Todos os direitos reservados.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-300 hover:text-rose-400 transition">Política de Privacidade</a>
+                    <a href="#" class="text-gray-300 hover:text-rose-400 transition">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Button -->
+    <a href="#passo-a-passo" class="sticky-button bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded-full transition flex items-center">
+        <i class="fas fa-play mr-2"></i> Comece Agora
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Toggle icon
+                if (answer.classList.contains('hidden')) {
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                } else {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                }
+            });
+        });
+        
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

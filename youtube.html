@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canais de Confeitaria no YouTube - Guia do Bolo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .channel-card:hover .channel-icon {
+            transform: scale(1.1);
+        }
+        
+        .difficulty-beginner {
+            background-color: #4CAF50;
+        }
+        
+        .difficulty-intermediate {
+            background-color: #FFC107;
+        }
+        
+        .difficulty-advanced {
+            background-color: #F44336;
+        }
+    </style>
+</head>
+<body class="bg-rose-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-rose-600 flex items-center">
+                <i class="fas fa-birthday-cake mr-2"></i> Guia do Bolo
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-rose-600 transition">Voltar para o Guia</a>
+            </div>
+            <button class="md:hidden text-rose-600" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-r from-rose-100 to-amber-100">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                Melhores Canais de Confeitaria no YouTube
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Aprenda técnicas profissionais gratuitamente com os melhores confeiteiros do Brasil e do mundo
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Canais Recomendados</h2>
+                <p class="text-xl text-gray-600 mb-4">Organizados por nível de dificuldade e tipo de conteúdo</p>
+                <div class="w-24 h-1 bg-rose-500 mx-auto"></div>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn bg-rose-600 text-white px-4 py-2 rounded-full" data-filter="all">
+                    Todos
+                </button>
+                <button class="filter-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full" data-filter="beginner">
+                    Iniciantes
+                </button>
+                <button class="filter-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full" data-filter="intermediate">
+                    Intermediários
+                </button>
+                <button class="filter-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full" data-filter="advanced">
+                    Avançados
+                </button>
+                <button class="filter-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full" data-filter="brazilian">
+                    Brasileiros
+                </button>
+                <button class="filter-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full" data-filter="international">
+                    Internacionais
+                </button>
+            </div>
+            
+            <!-- Channels Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Channel 1 -->
+                <div class="channel-card bg-white rounded-xl p-6 shadow-md transition duration-300" data-difficulty="beginner" data-origin="brazilian">
+                    <div class="flex items-center mb-4">
+                        <div class="channel-icon bg-rose-100 rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0 mr-4 transition duration-300">
+                            <i class="fab fa-youtube text-rose-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Canal da Tia Lê</h3>
+                            <div class="flex items-center mt-1">
+                                <span class="difficulty-beginner text-white text-xs px-2 py-1 rounded-full">Iniciante</span>
+                                <span class="text-gray-500 text-sm ml-2">1.2M inscritos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Receitas simples e práticas para quem está começando na confeitaria. Tia Lê ensina desde o básico até técnicas mais elaboradas.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Bolos Caseiros</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Decoração Simples</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Receitas Econômicas</span>
+                    </div>
+                    <a href="https://youtube.com/canaldatiale" target="_blank" class="text-rose-600 font-bold hover:underline inline-flex items-center">
+                        Acessar Canal <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Channel 2 -->
+                <div class="channel-card bg-white rounded-xl p-6 shadow-md transition duration-300" data-difficulty="intermediate" data-origin="brazilian">
+                    <div class="flex items-center mb-4">
+                        <div class="channel-icon bg-rose-100 rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0 mr-4 transition duration-300">
+                            <i class="fab fa-youtube text-rose-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Bolo da Vovó</h3>
+                            <div class="flex items-center mt-1">
+                                <span class="difficulty-intermediate text-white text-xs px-2 py-1 rounded-full">Intermediário</span>
+                                <span class="text-gray-500 text-sm ml-2">850K inscritos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Técnicas tradicionais com toque moderno. Ideal para quem já domina o básico e quer aprimorar suas habilidades.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Técnicas Clássicas</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Receitas Familiares</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Dicas Profissionais</span>
+                    </div>
+                    <a href="https://youtube.com/bolodavovo" target="_blank" class="text-rose-600 font-bold hover:underline inline-flex items-center">
+                        Acessar Canal <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Channel 3 -->
+                <div class="channel-card bg-white rounded-xl p-6 shadow-md transition duration-300" data-difficulty="advanced" data-origin="brazilian">
+                    <div class="flex items-center mb-4">
+                        <div class="channel-icon bg-rose-100 rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0 mr-4 transition duration-300">
+                            <i class="fab fa-youtube text-rose-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Confeitaria Artística</h3>
+                            <div class="flex items-center mt-1">
+                                <span class="difficulty-advanced text-white text-xs px-2 py-1 rounded-full">Avançado</span>
+                                <span class="text-gray-500 text-sm ml-2">1.5M inscritos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Técnicas avançadas de decoração e confeitaria artística. Para quem quer levar seus bolos a outro nível.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Escultura em Bolo</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Pasta Americana</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Técnicas Profissionais</span>
+                    </div>
+                    <a href="https://youtube.com/confeitariaartistica" target="_blank" class="text-rose-600 font-bold hover:underline inline-flex items-center">
+                        Acessar Canal <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Channel 4 -->
+                <div class="channel-card bg-white rounded-xl p-6 shadow-md transition duration-300" data-difficulty="beginner" data-origin="international">
+                    <div class="flex items-center mb-4">
+                        <div class="channel-icon bg-rose-100 rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0 mr-4 transition duration-300">
+                            <i class="fab fa-youtube text-rose-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Cake Style</h3>
+                            <div class="flex items-center mt-1">
+                                <span class="difficulty-beginner text-white text-xs px-2 py-1 rounded-full">Iniciante</span>
+                                <span class="text-gray-500 text-sm ml-2">3.2M inscritos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Canal internacional com receitas básicas explicadas passo a passo. Legendas em português disponíveis.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Receitas Básicas</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Técnicas Fáceis</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Ingredientes Acessíveis</span>
+                    </div>
+                    <a href="https://youtube.com/cakestyle" target="_blank" class="text-rose-600 font-bold hover:underline inline-flex items-center">
+                        Acessar Canal <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Channel 5 -->
+                <div class="channel-card bg-white rounded-xl p-6 shadow-md transition duration-300" data-difficulty="intermediate" data-origin="international">
+                    <div class="flex items-center mb-4">
+                        <div class="channel-icon bg-rose-100 rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0 mr-4 transition duration-300">
+                            <i class="fab fa-youtube text-rose-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Sugar Art</h3>
+                            <div class="flex items-center mt-1">
+                                <span class="difficulty-intermediate text-white text-xs px-2 py-1 rounded-full">Intermediário</span>
+                                <span class="text-gray-500 text-sm ml-2">2.7M inscritos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Técnicas de decoração com açúcar e chocolate. Canal americano com tutoriais detalhados.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Trabalho com Chocolate</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Flores em Açúcar</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Técnicas Modernas</span>
+                    </div>
+                    <a href="https://youtube.com/sugarart" target="_blank" class="text-rose-600 font-bold hover:underline inline-flex items-center">
+                        Acessar Canal <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Channel 6 -->
+                <div class="channel-card bg-white rounded-xl p-6 shadow-md transition duration-300" data-difficulty="advanced" data-origin="international">
+                    <div class="flex items-center mb-4">
+                        <div class="channel-icon bg-rose-100 rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0 mr-4 transition duration-300">
+                            <i class="fab fa-youtube text-rose-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Master Cake</h3>
+                            <div class="flex items-center mt-1">
+                                <span class="difficulty-advanced text-white text-xs px-2 py-1 rounded-full">Avançado</span>
+                                <span class="text-gray-500 text-sm ml-2">4.1M inscritos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Técnicas profissionais de confeitaria de alto nível. Para quem quer trabalhar com bolos de luxo.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Bolos de Casamento</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Técnicas Avançadas</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Escultura em Açúcar</span>
+                    </div>
+                    <a href="https://youtube.com/mastercake" target="_blank" class="text-rose-600 font-bold hover:underline inline-flex items-center">
+                        Acessar Canal <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- More Channels Section -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Outros Canais Recomendados</h3>
+                
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Additional Channel 1 -->
+                        <div class="flex items-start">
+                            <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="fab fa-youtube text-rose-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Doces da Maria</h4>
+                                <p class="text-gray-600 text-sm">Receitas de doces e bolos para festas infantis</p>
+                                <a href="#" class="text-rose-600 text-sm hover:underline">Acessar</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Additional Channel 2 -->
+                        <div class="flex items-start">
+                            <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="fab fa-youtube text-rose-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Baking with Anna</h4>
+                                <p class="text-gray-600 text-sm">Canal internacional com receitas saudáveis</p>
+                                <a href="#" class="text-rose-600 text-sm hover:underline">Acessar</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Additional Channel 3 -->
+                        <div class="flex items-start">
+                            <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="fab fa-youtube text-rose-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Chef Bolos</h4>
+                                <p class="text-gray-600 text-sm">Técnicas profissionais para confeiteiros</p>
+                                <a href="#" class="text-rose-600 text-sm hover:underline">Acessar</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Additional Channel 4 -->
+                        <div class="flex items-start">
+                            <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="fab fa-youtube text-rose-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Sweet Dreams</h4>
+                                <p class="text-gray-600 text-sm">Decoração criativa para bolos temáticos</p>
+                                <a href="#" class="text-rose-600 text-sm hover:underline">Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tips Section -->
+            <div class="mt-16 bg-amber-50 rounded-xl p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Dicas para Aproveitar os Tutoriais</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Tip 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-list-ol text-rose-600"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-center mb-2">Assista primeiro</h4>
+                        <p class="text-gray-600 text-center">
+                            Veja o vídeo completo antes de começar para entender todo o processo.
+                        </p>
+                    </div>
+                    
+                    <!-- Tip 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-utensils text-rose-600"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-center mb-2">Prepare os ingredientes</h4>
+                        <p class="text-gray-600 text-center">
+                            Separe tudo antes de começar para não perder tempo durante o vídeo.
+                        </p>
+                    </div>
+                    
+                    <!-- Tip 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-pause text-rose-600"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-center mb-2">Use o pause</h4>
+                        <p class="text-gray-600 text-center">
+                            Não tenha pressa, pause o vídeo quando precisar acompanhar um passo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-2xl font-bold text-rose-400 mb-4 flex items-center">
+                        <i class="fas fa-birthday-cake mr-2"></i> Guia do Bolo
+                    </h3>
+                    <p class="text-gray-300">
+                        O guia completo para você abrir sua loja de bolos com apenas R$15 mil, mesmo começando do zero.
+                    </p>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#sobre" class="text-gray-300 hover:text-rose-400 transition">Sobre o Projeto</a></li>
+                        <li><a href="#passo-a-passo" class="text-gray-300 hover:text-rose-400 transition">Passo a Passo</a></li>
+                        <li><a href="#planejamento" class="text-gray-300 hover:text-rose-400 transition">Planejamento de 90 Dias</a></li>
+                        <li><a href="#downloads" class="text-gray-300 hover:text-rose-400 transition">Materiais Gratuitos</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-rose-400"></i> rafael@mmarques.net
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-rose-400"></i> (11) 95837-2200
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-rose-400"></i> São Paulo - SP
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/rafamarxs/" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rafamarxs/" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@rafamarxs" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://wa.me/5511958372200" target="_blank" class="bg-gray-700 hover:bg-rose-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h5 class="font-bold mb-2">Assine nossa newsletter</h5>
+                        <div class="flex">
+                            <input type="email" placeholder="Seu email" class="px-3 py-2 text-gray-800 rounded-l focus:outline-none w-full">
+                            <button class="bg-rose-600 hover:bg-rose-700 px-4 rounded-r transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300">© 2025 Guia do Bolo. Todos os direitos reservados.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-300 hover:text-rose-400 transition">Política de Privacidade</a>
+                    <a href="#" class="text-gray-300 hover:text-rose-400 transition">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter channels
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const channelCards = document.querySelectorAll('.channel-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-rose-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'hover:bg-gray-300');
+                });
+                
+                button.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+                button.classList.add('bg-rose-600', 'text-white');
+                
+                // Filter channels
+                const filter = button.dataset.filter;
+                
+                channelCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else if (filter === 'brazilian' || filter === 'international') {
+                        if (card.dataset.origin === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    } else {
+                        if (card.dataset.difficulty === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
